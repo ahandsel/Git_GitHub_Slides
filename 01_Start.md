@@ -559,7 +559,7 @@ drwxr-xr-x 5 UserName staff 160 Jun 9 14:56 refs
 
 `git push <remote> <branch>` 🔄
 
-* Local Repo → Remote Repo | コミットをエクスポートします
+* Local Repo → Remote Repo; コミットをエクスポートします
 * `git fetch` の対応
   * ローカルリポジトリへのインポートコミット
 * ⚠️ 注: プッシュすると、変更が上書きされる可能性があります。
