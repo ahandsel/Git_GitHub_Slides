@@ -5,13 +5,13 @@ _🇺🇸 English version: [05_CodeReview_EN.md](05_CodeReview_EN.md)_
 
 ## 概要 <!-- omit in toc -->
 
-* [`kintone_dojo` Repoの使用方法](#kintone_dojo-repoの使用方法)
+* [`kintone_dojo` Repoの使用方法](#use-kintone-dojo-repo)
 * [Demo YouTube Videos](#demo-youtube-videos)
   * [`kintone_dojo` Task Demo](#kintone_dojo-task-demo)
   * [GitHub Code Review + GitHub Desktop App](#github-code-review--github-desktop-app)
 
 
-## `kintone_dojo` Repoの使用方法
+## `kintone_dojo` Repoの使用方法 {#use-kintone-dojo-repo}
 
 * ⚠️ このリポジトリは, `kintone_dojo` の割り当てにのみ使用してください。
 * ⚡ 講義ノートを別の場所に保存します。

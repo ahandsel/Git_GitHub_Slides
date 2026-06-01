@@ -39,6 +39,10 @@ See [\_config.yml](_config.yml): theme `jekyll-theme-cayman`, plugin `jekyll-rel
 Because of `jekyll-relative-links`, cross-references between docs must use relative `*.md` paths (e.g. `[Prep - 00_Prep.md](00_Prep.md)`), not absolute or `.html` URLs.
 A prompt for finding and fixing Kramdown render-breakers lives in [prompts/fix-breaking-markdown.md](prompts/fix-breaking-markdown.md).
 
+Kramdown strips non-ASCII characters when it auto-generates heading IDs, so Japanese headings collapse to `section`, `section-1`, ... and any `#日本語` TOC link that works on GitHub.com breaks on the published site.
+Give every heading that contains non-ASCII characters an explicit Kramdown anchor with a short, descriptive ASCII slug (e.g. `## 概要 {#overview}`), and point its in-page TOC link at that slug (e.g. `[概要](#overview)`).
+See [01_Start.md](01_Start.md) for the established pattern.
+
 
 ## Tooling and commands
 
@@ -76,3 +80,4 @@ Keep files that must follow this rule out of prettier's reach (e.g. add them to 
 * Keep Japanese and English files in parity: when you change content in one language, update its `_EN` (or non-`_EN`) counterpart, or note the gap.
 * Reference images from `img/` using the lecture-prefixed naming scheme already in use.
 * Prefer relative links between docs so the Jekyll build and GitHub view both resolve them.
+* When you add or rename a Japanese/non-ASCII heading, give it an explicit `{#ascii-slug}` anchor and update the matching in-page TOC link - see "Build and publishing" for why.

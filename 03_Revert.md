@@ -7,22 +7,22 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
 
 ## 目次 <!-- omit in toc -->
 
-* [タイムトラベルの準備](#タイムトラベルの準備)
+* [タイムトラベルの準備](#prepare-time-travel)
   * [Local Git](#local-git)
   * [GitHub](#github)
-  * [サンプル ファイル と ブランチ を作成する](#サンプル-ファイル-と-ブランチ-を作成する)
-* [元に戻す: 時計を巻き戻す](#元に戻す-時計を巻き戻す)
-  * [歴史を見る](#歴史を見る)
+  * [サンプル ファイル と ブランチ を作成する](#create-sample-files-branches)
+* [元に戻す: 時計を巻き戻す](#revert-rewind-clock)
+  * [歴史を見る](#view-history)
   * [GitHub - timeline branch](#github---timeline-branch)
   * [GitHub - timeline's commits](#github---timelines-commits)
-* [過去を訪ねる](#過去を訪ねる)
-* [1コミット文過去に戻る](#1コミット文過去に戻る)
-* [コミットハッシュで過去に戻る](#コミットハッシュで過去に戻る)
+* [過去を訪ねる](#visit-the-past)
+* [1コミット文過去に戻る](#go-back-one-commit)
+* [コミットハッシュで過去に戻る](#go-back-by-hash)
 * [Reset vs Revert](#reset-vs-revert)
-* [次のセクション](#次のセクション)
+* [次のセクション](#next-section)
 
 
-## タイムトラベルの準備
+## タイムトラベルの準備 {#prepare-time-travel}
 
 
 ### Local Git
@@ -103,7 +103,7 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
 ---
 
 
-### サンプル ファイル と ブランチ を作成する
+### サンプル ファイル と ブランチ を作成する {#create-sample-files-branches}
 
 タイムトラベルためにファイルを作成する
 
@@ -145,10 +145,10 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
    ```
 
 
-## 元に戻す: 時計を巻き戻す
+## 元に戻す: 時計を巻き戻す {#revert-rewind-clock}
 
 
-### 歴史を見る
+### 歴史を見る {#view-history}
 
 次の 4 つのファイルがリポジトリ内にあるはずです
 
@@ -196,7 +196,7 @@ git push origin timeline
 ![03_Revert_timelineBranch_Commits](img/03_Revert_timelineBranch_Commits.png)
 
 
-## 過去を訪ねる
+## 過去を訪ねる {#visit-the-past}
 
 `git log --oneline`
 
@@ -254,7 +254,7 @@ git push origin timeline
   ```
 
 
-## 1コミット文過去に戻る
+## 1コミット文過去に戻る {#go-back-one-commit}
 
 `git revert HEAD`
 
@@ -297,7 +297,7 @@ git push origin timeline
   ```
 
 
-## コミットハッシュで過去に戻る
+## コミットハッシュで過去に戻る {#go-back-by-hash}
 
 ```sh
 git log --oneline
@@ -397,7 +397,7 @@ git revert [commit hash]
 ![03_Revert_GitRevert.png](img/03_Revert_GitRevert.png)
 
 
-## 次のセクション
+## 次のセクション {#next-section}
 
 [Git CLI カンニングペーパー - 04_CheatSheet.md](04_CheatSheet.md)
 
