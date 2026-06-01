@@ -8,9 +8,11 @@
   "author": "",
   "type": "module",
   "scripts": {
-    "lint": "pnpm run lint-code && pnpm run lint-md",
+    "lint": "pnpm run lint-code && pnpm run lint-md && pnpm run lint-text",
     "lint-code": "prettier --write .",
     "lint-md": "markdownlint-cli2 --fix",
+    "lint-text": "textlint .",
+    "lint-text-fix": "textlint --fix .",
     "test": "pnpm run lint"
   },
   "devDependencies": {
@@ -23,7 +25,10 @@
     "prettier-plugin-packagejson": "^3.0.2",
     "prettier-plugin-sh": "^0.18.1",
     "prettier-plugin-sql": "^0.20.0",
-    "prettier-plugin-toml": "^2.0.6"
+    "prettier-plugin-toml": "^2.0.6",
+    "textlint": "^15.7.1",
+    "textlint-rule-preset-jtf-style": "^3.0.3",
+    "textlint-rule-prh": "^6.1.0"
   },
   "packageManager": "pnpm@10.33.0",
   "engines": {

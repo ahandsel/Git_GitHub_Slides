@@ -1,0 +1,9 @@
+# textlint targets only the Japanese source files.
+# English and meta files are excluded (jtf-style rules do not apply to them).
+*_EN.md
+README_EN.md
+English_GitHub_Lec.md
+AGENTS.md
+prompts/**
+archive/**
+node_modules/**

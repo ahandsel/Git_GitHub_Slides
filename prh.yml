@@ -1,0 +1,13 @@
+# prh dictionary - term normalization for the Japanese course files.
+# Mirrors the rules the editor's global prh flags, scoped to terms that are
+# safe for this bilingual repo (no false hits on filenames, URLs, or commands).
+version: 1
+rules:
+  - expected: Windows 10
+    pattern: /Windows10(?!\d)/
+  - expected: コンピューター
+    pattern: /コンピュータ(?!ー)/
+  - expected: GitHub
+    # Capital-G typo only; lower-case `github.com` URLs are left untouched.
+    patterns:
+      - Github
