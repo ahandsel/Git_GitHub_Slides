@@ -28,19 +28,12 @@ _🇺🇸 English version: [01_Start_EN.md](01_Start_EN.md)_
   * [ステージングエリアにファイルを追加](#ステージングエリアにファイルを追加)
   * [Gitリポジトリにファイルを追加](#gitリポジトリにファイルを追加)
   * [GitHub リポジトリを作成する](#github-リポジトリを作成する)
-  * [Local Git --> GitHub](#local-git----github)
-    * [デバッグ](#デバッグ)
+  * [Local Git → GitHub](#local-git--github)
   * [Hands-on A が完了しました](#hands-on-a-が完了しました)
 * [Git の基本的なコマンドの概要](#git-の基本的なコマンドの概要)
   * [Git での変更の保存方法](#git-での変更の保存方法)
-    * [working directory, `git add`, staging area](#working-directory-git-add-staging-area)
-    * [待って, ステージングエリア? 🤔](#待って-ステージングエリア-)
-    * [`git commit`, repository, `git push`](#git-commit-repository-git-push)
-    * [Git フォルダーの中身は何ですか? 🤔](#git-フォルダーの中身は何ですか-)
-    * [`git push`, remote repository](#git-push-remote-repository)
   * [リモートリポジトリの操作](#リモートリポジトリの操作)
   * [git push?](#git-push)
-    * [ゲームの例-どうぶつの森](#ゲームの例-どうぶつの森)
 * [ハンズオン A レビュー](#ハンズオン-a-レビュー)
 * [クイズの時間](#クイズの時間)
 * [次のセクション](#次のセクション)
@@ -285,7 +278,8 @@ nothing to commit, working tree clean
 ![Gif_GitHub_Repo_Demo](img/Gif_GitHub_Repo_Demo.gif)
 
 
-### Local Git --> GitHub
+
+### Local Git → GitHub
 
 repository を `push` しましょう！
 GitHub の `Clone or download` ボタンをクリックし, HTTPS リンクをコピーして URL を取得します
@@ -509,8 +503,7 @@ drwxr-xr-x 5 UserName staff 160 Jun 9 14:56 refs
 | ➡️  | [ remote repository (GitHub) 🌐 ] |
 
 `git push <remote> <branch>` 🔄
-
-* Local Repo --> Remote Repo
+* Local Repo → Remote Repo
 * ローカルリポジトリをリモートリポジトリにアップロードするコマンドです
 * コミットをエクスポートします
 
@@ -565,8 +558,7 @@ drwxr-xr-x 5 UserName staff 160 Jun 9 14:56 refs
 ### git push?
 
 `git push <remote> <branch>` 🔄
-
-* Local Repo --> Remote Repo | コミットをエクスポートします
+* Local Repo → Remote Repo | コミットをエクスポートします
 * `git fetch` の対応
   * ローカルリポジトリへのインポートコミット
 * ⚠️ 注: プッシュすると, 変更が上書きされる可能性があります。

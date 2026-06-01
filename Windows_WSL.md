@@ -301,7 +301,7 @@ Hi ahandsel! You've successfully authenticated, but GitHub does not provide shel
 
 ## Windows + WLS と GitHub
 
-HTTPSを使用する代わりに --> SSHを使用
+HTTPSを使用する代わりに → SSHを使用
 
 ```shell
 git clone https://github.com/.../a.git
@@ -314,4 +314,4 @@ git clone git@github.com:.../a.git
 
 ## これで, Git をインストールする準備が整いました
 
-[Set Up Git](#set-up-git) セクションまでスキップして, プロセスを完了してください!
+[Gitをインストールする](#gitをインストールする) セクションまでスキップして, プロセスを完了してください!

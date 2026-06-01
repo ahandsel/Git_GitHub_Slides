@@ -4,6 +4,9 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
 
 このセクションでは `git revert` を紹介し, Git でファイルを元に戻すやり方について説明します
 
+
+## 目次 <!-- omit in toc -->
+
 * [タイムトラベルの準備](#タイムトラベルの準備)
   * [Local Git](#local-git)
   * [GitHub](#github)

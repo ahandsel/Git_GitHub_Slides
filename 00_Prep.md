@@ -340,12 +340,12 @@ git config --global init.defaultBranch main
 ### Windows - cash をインストール
 
 1. [Node.js](https://nodejs.org/ja/about/) を Windows にインストールします
-   * [Download | Node.js](https://nodejs.org/ja/download/)
-   * Windows に Node.js をインストールガイド - [Windows 10へNode.jsをインストールする - Qiita](https://qiita.com/echolimitless/items/83f8658cf855de04b9ce)
-2. Command Prompt で次のコマンドを実行して, Node.js のインストールを確認します
-   * `node --version`
-3. [dthree/cash](https://github.com/dthree/cash) をインストールして, Windows コマンドプロンプトで Linux コマンドを実行できるようにします。
-   * インストールコマンド: `npm install cash-global -g`
+    * [Download - Node.js](https://nodejs.org/ja/download/)
+    * Windows に Node.js をインストールガイド - [Windows 10へNode.jsをインストールする - Qiita](https://qiita.com/echolimitless/items/83f8658cf855de04b9ce)
+1. Command Prompt で次のコマンドを実行して, Node.js のインストールを確認します
+    * `node --version`
+1. [dthree/cash](https://github.com/dthree/cash) をインストールして, Windows コマンドプロンプトで Linux コマンドを実行できるようにします。
+    * インストールコマンド: `npm install cash-global -g`
 
 ---
 
