@@ -13,17 +13,17 @@ _🇺🇸 English version: [05_CodeReview_EN.md](05_CodeReview_EN.md)_
 
 ## `kintone_dojo` Repoの使用方法 {#use-kintone-dojo-repo}
 
-* ⚠️ このリポジトリは, `kintone_dojo` の割り当てにのみ使用してください。
+* ⚠️ このリポジトリは、`kintone_dojo` の割り当てにのみ使用してください。
 * ⚡ 講義ノートを別の場所に保存します。
-* これは, `git` または GitHub の問題が講義中にメモのに 影響しないためです
+* これは、`git` または GitHub の問題が講義中にメモのに 影響しないためです
 
 `kintone_dojo`の割り当てを開始するとき：
 
-1. mainブランチから, `task##`というタイトルの新しいブランチを作成します。
+1. mainブランチから、`task##`というタイトルの新しいブランチを作成します。
    * `$ git checkout -b task01`
 2. 新しいブランチに **Task##** フォルダを作成します。
    * `$ mkdir Task01`
-3. コードを記述して, このフォルダーにコミットします。
+3. コードを記述して、このフォルダーにコミットします。
    * `$ git add Task01.html Task01.js`
    * `$ git commit -m "Task01 - 最初のドラフト"`
 

@@ -2,7 +2,7 @@
 
 _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
 
-このセクションでは `git revert` を紹介し, Git でファイルを元に戻すやり方について説明します
+このセクションでは `git revert` を紹介し、Git でファイルを元に戻すやり方について説明します
 
 
 ## 目次 <!-- omit in toc -->
@@ -16,7 +16,7 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
   * [GitHub - timeline branch](#github---timeline-branch)
   * [GitHub - timeline's commits](#github---timelines-commits)
 * [過去を訪ねる](#visit-the-past)
-* [1コミット文過去に戻る](#go-back-one-commit)
+* [1コミット分過去に戻る](#go-back-one-commit)
 * [コミットハッシュで過去に戻る](#go-back-by-hash)
 * [Reset vs Revert](#reset-vs-revert)
 * [次のセクション](#next-section)
@@ -27,10 +27,10 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
 
 ### Local Git
 
-前のセクションでは, `develop` ブランチを作成, マージ, 削除しました.
+前のセクションでは、`develop` ブランチを作成、マージ、削除しました。
 
-`main` ブランチだけにしましょう.  
-`develop` ブランチがまだある場合削除してください.
+`main` ブランチだけにしましょう。  
+`develop` ブランチがまだある場合削除してください。
 
 1. `learning_git` フォルダーに移動します
 
@@ -61,7 +61,7 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
      main
    ```
 
-4. `develop` ブランチにいるので, `main`に切り替えます
+4. `develop` ブランチにいるので、`main`に切り替えます
 
    ```sh
    git checkout main
@@ -84,7 +84,7 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
    Deleted branch develop (was 4f98baf).
    ```
 
-6. develop_file.md ファイルも削除しましょう．
+6. develop_file.md ファイルも削除しましょう。
 
    ```sh
    rm develop_file.md
@@ -93,9 +93,9 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
 
 ### GitHub
 
-1. Github の `learning_git` リポジトリに移動します.
+1. GitHub の `learning_git` リポジトリに移動します。
    * github.com/`UserName`/learning_git
-2. ブランチが1つだけかどうかを確認する.
+2. ブランチが1つだけかどうかを確認する。
    * github.com/`UserName`/learning_git/branches
 3. `develop` ブランチがあれば[ブランチを削除](https://docs.github.com/ja/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository#deleting-a-branch)
    * ![03_Revert_DeleteBranch](img/03_Revert_DeleteBranch.png)
@@ -105,7 +105,7 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
 
 ### サンプル ファイル と ブランチ を作成する {#create-sample-files-branches}
 
-タイムトラベルためにファイルを作成する
+タイムトラベルのためにファイルを作成する
 
 1. `main` ブランチに切り替える
 
@@ -113,7 +113,7 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
    git checkout main
    ```
 
-2. `timeline` ブランチを作成します.
+2. `timeline` ブランチを作成します。
 
    ```sh
    git checkout -b timeline
@@ -123,7 +123,7 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
    Switched to a new branch 'timeline'
    ```
 
-3. 次のファイルを作成して別々にコミットします.
+3. 次のファイルを作成して別々にコミットします。
    * `yr_1`, `yr_2`, `yr_3`
 
    ```sh
@@ -162,8 +162,8 @@ README.md   yr_1   yr_2   yr_3
 
 `git log --oneline`
 
-* ブランチ上でのコミットを一覧表示します.
-* チェックアウトおよび復帰コマンドに提供されたコミットハッシュを使用する.
+* ブランチ上でのコミットを一覧表示します。
+* チェックアウトおよび復帰コマンドに提供されたコミットハッシュを使用する。
 
   ```sh
   git log --oneline
@@ -178,8 +178,8 @@ README.md   yr_1   yr_2   yr_3
 
 `git push origin timeline`
 
-* これで `timeline` ブランチは GitHub にプッシュされています.
-* ブラウザでリポジトリにアクセスして確認します.
+* これで `timeline` ブランチは GitHub にプッシュされています。
+* ブラウザでリポジトリにアクセスして確認します。
 
 ```sh
 git push origin timeline
@@ -216,9 +216,9 @@ git push origin timeline
 
 `git checkout [commit hash]`
 
-* 作業ディレクトリを [`commit`]とまったく同じ状態に変換します.
-* これが元に戻すコミットかどうかを確認します.
-* この状況で行われた変更は保存されません.
+* 作業ディレクトリを [`commit`]とまったく同じ状態に変換します。
+* これが元に戻すコミットかどうかを確認します。
+* この状況で行われた変更は保存されません。
 
   ```sh
   git checkout f10f791
@@ -254,11 +254,11 @@ git push origin timeline
   ```
 
 
-## 1コミット文過去に戻る {#go-back-one-commit}
+## 1コミット分過去に戻る {#go-back-one-commit}
 
 `git revert HEAD`
 
-* 1コミット前に戻ります.
+* 1コミット前に戻ります。
 
   ```sh
   git checkout timeline
@@ -311,8 +311,8 @@ f10f791 Year 1
 03098e7 (origin/main, main) README file created
 ```
 
-`7a5bbf4 (origin/timeline) Year 3`行に注意してください.  
-これは, GitHub (origin) に `Revert "Year 3"` コミットが実装されていないことを意味します。
+`7a5bbf4 (origin/timeline) Year 3`行に注意してください。  
+これは、GitHub (origin) に `Revert "Year 3"` コミットが実装されていないことを意味します。
 
 `git push`
 
@@ -382,17 +382,17 @@ git revert [commit hash]
 `git revert [commit hash]`
 
 * 前進する取り消しコマンド
-* 指定された[ `commit` ]によって加えられた変更を反転し, 新しいコミットとして結果を追加します.
+* 指定された[ `commit` ]によって加えられた変更を反転し、新しいコミットとして結果を追加します。
 
 
 ## Reset vs Revert
 
-| `git reset [commit]`                                              | `git revert [commit]`                           |
-| ----------------------------------------------------------------- | ----------------------------------------------- |
-| 元に戻す取り消し操作の削除                                        | 前進する取り消し操作                            |
-| 過去の [`commit`] に戻り, それまでのすべてのコミットを削除します. | 過去の[ `commit` ]で新しいコミットを作成します. |
-| これはすべてをクリーンアップします.                               | コミットは削除されません.                       |
-| ただし, 削除されたコミットの履歴は失われます.                     | 公開/共有リポジトリに使用                       |
+| `git reset [commit]`                                               | `git revert [commit]`                            |
+| ------------------------------------------------------------------ | ------------------------------------------------ |
+| 元に戻す取り消し操作の削除                                         | 前進する取り消し操作                             |
+| 過去の [`commit`] に戻り、それまでのすべてのコミットを削除します。 | 過去の[ `commit` ]で新しいコミットを作成します。 |
+| これはすべてをクリーンアップします。                               | コミットは削除されません。                       |
+| ただし、削除されたコミットの履歴は失われます。                     | 公開/共有リポジトリに使用                        |
 
 ![03_Revert_GitRevert.png](img/03_Revert_GitRevert.png)
 
