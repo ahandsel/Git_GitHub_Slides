@@ -13,6 +13,21 @@ The content is **bilingual**: Japanese is the primary language and English is th
 Some English files are still marked "⚠️ Pending Translation".
 
 
+## Target audience
+
+The readers are **non-technical members preparing for an upcoming new role** that will require Git.
+They are new to Git and to version control in general, and they read in either Japanese or English.
+Assume no prior command-line, software-engineering, or Git background.
+
+Write for that reader:
+
+* Choose plain, everyday wording over technical jargon; when a Git term is unavoidable, define it in plain language the first time it appears.
+* Explain the "why" behind a step, not just the command to type.
+* Keep sentences short and concrete, and prefer a worked example over an abstract description.
+* Avoid assuming knowledge of related tools, workflows, or concepts the reader has not been shown yet.
+* Keep this tone consistent across both the Japanese and English versions.
+
+
 ## Repository structure
 
 * Lecture and guide content lives in numbered Markdown files at the repo root.
