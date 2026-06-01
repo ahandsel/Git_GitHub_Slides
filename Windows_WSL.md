@@ -2,9 +2,12 @@
 
 これは, Windows10にgitをインストールする別の方法です。
 
+
 ## インストール Windows Subsystem for Linux (WSL)
 
+
 ### 手順
+
 * Step 1: Linux 用 Windows サブシステムを有効にする
 * Step 2: WSL 2 の実行に関する要件を確認する
 * Step 3: 仮想マシンの機能を有効にする
@@ -12,7 +15,9 @@
 * Step 5: WSL 2 を既定のバージョンとして設定する
 * Step 6: 選択した Linux ディストリビューションをインストールする
 
+
 ### Resources <!-- omit in toc -->
+
 * [Windows 10 に WSL をインストールする](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10)
 * [Install WSL on Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
@@ -33,6 +38,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 
 ### Step 2: WSL 2 の実行に関する要件を確認する
+
 * 必ずWindows OSを更新してください
 * Windows 10 Version1709 (OS build16299) 以降である必要があります。
 * Windows OS 確認し方
@@ -41,26 +47,29 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 
 ### Step 3: 仮想マシンの機能を有効にする
+
 * "仮想マシン プラットフォーム" オプション機能を有効にする必要があります。
 * この機能を使用するには, コンピューターに仮想化機能が必要です。
 * 管理者として PowerShell を開き, 以下を実行します。
 
-    ```shell
-    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-    ```
+  ```shell
+  dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+  ```
 
 * お使いのマシンを 再起動 して WSL のインストールを完了し, WSL 2 に更新します。
 
 
 ### Step 4: Linux カーネル更新プログラム パッケージをダウンロードする
+
 1. 最新のパッケージをダウンロードします。
-    * [x64 マシン用 WSL2 Linux カーネル更新プログラム パッケージ](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+   * [x64 マシン用 WSL2 Linux カーネル更新プログラム パッケージ](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 2. 前の手順でダウンロードした更新プログラム パッケージを実行します。
-    * ダブルクリックして実行します。管理者特権のアクセス許可を求めるメッセージが表示されます。
-    * `はい` を選択して, このインストールを承認します。
+   * ダブルクリックして実行します。管理者特権のアクセス許可を求めるメッセージが表示されます。
+   * `はい` を選択して, このインストールを承認します。
 
 
 ### Step 5: WSL 2 を既定のバージョンとして設定する
+
 新しい Linux ディストリビューションをインストールする際の既定のバージョンとして `WSL 2` を設定します。  
 PowerShell を開いて次のコマンドを実行:
 
@@ -70,20 +79,23 @@ wsl --set-default-version 2
 
 
 ### Step 6: 選択した Linux ディストリビューションをインストールする
+
 `Ubuntu 18.04 LTS`で検索してLinux ディストリビューションをインストール
+
 * [Ubuntu 18.04 LTS を入手 - Microsoft Store](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
 
 ---
 
+
 ## WSLの初期化
 
 1. ディストリビューションを起動します (Ubuntu 18.04)
-    * `Microsoft Store`アプリの `起動` ボタンをクリックします
-      * 新しくインストールした Linux ディストリビューションを初めて起動すると, コンソール ウィンドウが開き, ファイルが圧縮解除されて PC に格納されるまで 1~2 分待つように求められます。
-      * 今後のすべての起動には, 1 秒もかかりません。
+   * `Microsoft Store`アプリの `起動` ボタンをクリックします
+     * 新しくインストールした Linux ディストリビューションを初めて起動すると, コンソール ウィンドウが開き, ファイルが圧縮解除されて PC に格納されるまで 1~2 分待つように求められます。
+     * 今後のすべての起動には, 1 秒もかかりません。
 2. 新しいLinuxユーザーアカウントの設定
-    * このユーザーアカウントは Windows ユーザー名に影響しません
-    * `sudo` コマンドを実行するときにこの設定されたパスワードが必要です
+   * このユーザーアカウントは Windows ユーザー名に影響しません
+   * `sudo` コマンドを実行するときにこの設定されたパスワードが必要です
 
 ```shell
 ... this may take a few minutes...
@@ -100,13 +112,17 @@ To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 ```
 
+
 ### Resources <!-- omit in toc -->
+
 * Microsoft Docs: [Linux ディストリビューションのユーザー アカウントを作成する](https://docs.microsoft.com/ja-jp/windows/wsl/user-support)
 * Microsoft Docs: [Create user account for Linux distribution](https://docs.microsoft.com/en-us/windows/wsl/user-support)
 
 ---
 
+
 ## Windows と WSL の間でコピーと貼り付けを有効にする (Ubuntu)
+
 Ubuntu ウインドウの上タブの部分で右クリックします．
 
 | English Settings                                                                                               | 日本語 設定                                                                                                                         |
@@ -116,9 +132,11 @@ Ubuntu ウインドウの上タブの部分で右クリックします．
 
 ---
 
+
 ## Gitをインストールする
+
 1. ディストリビューションのパッケージを更新してアップグレードする
-    * 「`続行しますか？[Y / n]`」と尋ねられたら, `Y` を入力します。
+   * 「`続行しますか？[Y / n]`」と尋ねられたら, `Y` を入力します。
 
    ```shell
    sudo apt update && sudo apt upgrade
@@ -132,7 +150,9 @@ Ubuntu ウインドウの上タブの部分で右クリックします．
 
 ---
 
+
 ## WSLを構成する
+
 [wslgit](https://github.com/hangxingliu/wslgit) は Git のすべてのリクエストをWSLに転送するツールです．
 
 1. [wslgit](https://github.com/hangxingliu/wslgit) リポジトリをダウンロードする
@@ -161,14 +181,16 @@ cd
 
 ---
 
+
 ## WSL & VS Code
+
 1. [Remote - WSL VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)をインストール
-    * ![Remote_WSL.png](img/Remote_WSL.png)
+   * ![Remote_WSL.png](img/Remote_WSL.png)
 
 2. VSコード設定に移動して, `git.path` オブジェクトを変更します。
-    * VS Code > File > Preferences > Setting
-    * `git.path` を検索
-    * `Edit in settings.json` をクリック
+   * VS Code > File > Preferences > Setting
+   * `git.path` を検索
+   * `Edit in settings.json` をクリック
 
 3. `REPLACE_WITH_WindowsUSER` と `REPLACE_WITH_UbuntuUSER` を独自のものに置き換えます。
 
@@ -185,6 +207,7 @@ Windows ユーザー名として `a01234`, Ubuntu ユーザー名として `PAND
   "git.path": "C:\Users\a01234\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home\PANDA\wslgit\git.bat"
 }
 ```
+
 
 ## Ubuntuの日本語版
 
@@ -208,11 +231,12 @@ Windows ユーザー名として `a01234`, Ubuntu ユーザー名として `PAND
 
 4. Ubuntuを再起動します
 
+
 ## Git + GitHub設定
 
 1. Ubuntu 中で SSHキーを生成する
-    * GitHubとのリンクが必要です
-    * 質問は空白のままにして, そのまま入力してください
+   * GitHubとのリンクが必要です
+   * 質問は空白のままにして, そのまま入力してください
 
    ```shell
    ssh-keygen
@@ -228,19 +252,20 @@ Windows ユーザー名として `a01234`, Ubuntu ユーザー名として `PAND
    ```
 
 2. キーをクリップボードにコピーします
-    * これは, GitHub.comの設定ページに貼り付ける必要があります。
+   * これは, GitHub.comの設定ページに貼り付ける必要があります。
 
    ```shell
-   cat ~/.ssh/id_rsa.pub|clip.exe
+   cat ~/.ssh/id_rsa.pub | clip.exe
    ```
 
 3. GitHub で新しい SSH キー を生成する
-    * [New SSH key ボタン](https://github.com/settings/ssh/new)
-    * タイトルにWindows WSLと入力します.
-    * 公開キー (public key) を貼り付けます
-      * `Add SSH key` ボタン
+   * [New SSH key ボタン](https://github.com/settings/ssh/new)
+   * タイトルにWindows WSLと入力します.
+   * 公開キー (public key) を貼り付けます
+     * `Add SSH key` ボタン
 
 ![Gif_GitHub_SSH_Setup](img/Gif_GitHub_SSH_Setup.gif)
+
 
 ## 設定を確認
 
@@ -261,14 +286,18 @@ Hi ahandsel! You've successfully authenticated, but GitHub does not provide shel
 
 ---
 
+
 ## VS Code + Explorer
 
 現在のLinuxフォルダーからエクスプローラーを開くには, 次のように入力します。
+
 * `explorer.exe .`
 
 現在のLinuxフォルダーからVS Codeを開くには, 次のように入力します。
+
 * エラーがある場合は, UbuntuとVSコードを再起動してください
 * `code .`
+
 
 ## Windows + WLS と GitHub
 
@@ -282,5 +311,7 @@ git clone git@github.com:.../a.git
 
 ![Gif_GitHub_SSH_Download](img/Gif_GitHub_SSH_Download.gif)
 
+
 ## これで, Git をインストールする準備が整いました
+
 [Set Up Git](#set-up-git) セクションまでスキップして, プロセスを完了してください!

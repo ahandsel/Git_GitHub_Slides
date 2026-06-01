@@ -18,7 +18,9 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
 * [Reset vs Revert](#reset-vs-revert)
 * [次のセクション](#次のセクション)
 
+
 ## タイムトラベルの準備
+
 
 ### Local Git
 
@@ -85,37 +87,41 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
    rm develop_file.md
    ```
 
+
 ### GitHub
+
 1. Github の `learning_git` リポジトリに移動します.
-    * github.com/`UserName`/learning_git
+   * github.com/`UserName`/learning_git
 2. ブランチが1つだけかどうかを確認する.
-    * github.com/`UserName`/learning_git/branches
+   * github.com/`UserName`/learning_git/branches
 3. `develop` ブランチがあれば[ブランチを削除](https://docs.github.com/ja/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository#deleting-a-branch)
-    * ![03_Revert_DeleteBranch](img/03_Revert_DeleteBranch.png)
+   * ![03_Revert_DeleteBranch](img/03_Revert_DeleteBranch.png)
 
 ---
 
+
 ### サンプル ファイル と ブランチ を作成する
+
 タイムトラベルためにファイルを作成する
 
 1. `main` ブランチに切り替える
 
-    ```sh
-    git checkout main
-    ```
+   ```sh
+   git checkout main
+   ```
 
 2. `timeline` ブランチを作成します.
 
-    ```sh
-    git checkout -b timeline
-    ```
+   ```sh
+   git checkout -b timeline
+   ```
 
-    ```terminal
-    Switched to a new branch 'timeline'
-    ```
+   ```terminal
+   Switched to a new branch 'timeline'
+   ```
 
 3. 次のファイルを作成して別々にコミットします.
-    * `yr_1`, `yr_2`, `yr_3`
+   * `yr_1`, `yr_2`, `yr_3`
 
    ```sh
    touch yr_1
@@ -135,36 +141,40 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
    git commit -m "Year 3"
    ```
 
+
 ## 元に戻す: 時計を巻き戻す
+
 
 ### 歴史を見る
 
 次の 4 つのファイルがリポジトリ内にあるはずです
 
-   ```sh
-   ls
-   ```
+```sh
+ls
+```
 
-   ```terminal
-   README.md   yr_1   yr_2   yr_3
-   ```
+```terminal
+README.md   yr_1   yr_2   yr_3
+```
 
 `git log --oneline`
+
 * ブランチ上でのコミットを一覧表示します.
 * チェックアウトおよび復帰コマンドに提供されたコミットハッシュを使用する.
 
-   ```sh
-   git log --oneline
-   ```
+  ```sh
+  git log --oneline
+  ```
 
-   ```terminal
-   7a5bbf4 (HEAD -> timeline) Year 3
-   5215f6d Year 2
-   f10f791 Year 1
-   03098e7 (origin/main, main) README file created
-   ```
+  ```terminal
+  7a5bbf4 (HEAD -> timeline) Year 3
+  5215f6d Year 2
+  f10f791 Year 1
+  03098e7 (origin/main, main) README file created
+  ```
 
 `git push origin timeline`
+
 * これで `timeline` ブランチは GitHub にプッシュされています.
 * ブラウザでリポジトリにアクセスして確認します.
 
@@ -172,108 +182,117 @@ _🇺🇸 English version: [03_Revert_EN.md](03_Revert_EN.md)_
 git push origin timeline
 ```
 
+
 ### GitHub - timeline branch
+
 ![03_Revert_timelineBranch](img/03_Revert_timelineBranch.png)
 
+
 ### GitHub - timeline's commits
+
 ![03_Revert_timelineBranch_Commits](img/03_Revert_timelineBranch_Commits.png)
 
 
 ## 過去を訪ねる
 
 `git log --oneline`
+
 * ブランチ上でのコミットを一覧表示します
 * チェックアウトおよび復帰コマンドに提供されたコミットハッシュを使用する
 
-   ```sh
-   git log --oneline
-   ```
+  ```sh
+  git log --oneline
+  ```
 
-   ```terminal
-   7a5bbf4 (HEAD -> timeline, origin/timeline) Year 3
-   5215f6d Year 2
-   f10f791 Year 1
-   03098e7 (origin/main, main) README file created
-   ```
+  ```terminal
+  7a5bbf4 (HEAD -> timeline, origin/timeline) Year 3
+  5215f6d Year 2
+  f10f791 Year 1
+  03098e7 (origin/main, main) README file created
+  ```
 
 `git checkout [commit hash]`
+
 * 作業ディレクトリを [`commit`]とまったく同じ状態に変換します.
 * これが元に戻すコミットかどうかを確認します.
 * この状況で行われた変更は保存されません.
 
-   ```sh
-   git checkout f10f791
-   ```
+  ```sh
+  git checkout f10f791
+  ```
 
-   ```terminal
-   Note: switching to 'f10f791'.
+  ```terminal
+  Note: switching to 'f10f791'.
 
-   You are in 'detached HEAD' state. You can look around, make experimental
-   changes and commit them, and you can discard any commits you make in this
-   state without impacting any branches by switching back to a branch.
+  You are in 'detached HEAD' state. You can look around, make experimental
+  changes and commit them, and you can discard any commits you make in this
+  state without impacting any branches by switching back to a branch.
 
-   If you want to create a new branch to retain commits you create, you may
-   do so (now or later) by using -c with the switch command. Example:
+  If you want to create a new branch to retain commits you create, you may
+  do so (now or later) by using -c with the switch command. Example:
 
-     git switch -c <new-branch-name>
+    git switch -c <new-branch-name>
 
-   Or undo this operation with:
+  Or undo this operation with:
 
-     git switch -
+    git switch -
 
-   Turn off this advice by setting config variable advice.detachedHead to false
+  Turn off this advice by setting config variable advice.detachedHead to false
 
-   HEAD is now at f10f791 Year 1
-   ```
+  HEAD is now at f10f791 Year 1
+  ```
 
-   ```sh
-   ls
-   ```
+  ```sh
+  ls
+  ```
 
-   ```terminal
-   README.md  yr_1
-   ```
+  ```terminal
+  README.md  yr_1
+  ```
+
 
 ## 1コミット文過去に戻る
 
 `git revert HEAD`
+
 * 1コミット前に戻ります.
 
-    ```sh
-    git checkout timeline
-    ```
+  ```sh
+  git checkout timeline
+  ```
 
-    ```terminal
-    Previous HEAD position was f10f791 Year 1
-    Switched to branch 'timeline'
-    ```
+  ```terminal
+  Previous HEAD position was f10f791 Year 1
+  Switched to branch 'timeline'
+  ```
 
-    ```sh
-    ls
-    ```
+  ```sh
+  ls
+  ```
 
-    ```terminal
-    README.md  yr_1  yr_2  yr_3
-    ```
+  ```terminal
+  README.md  yr_1  yr_2  yr_3
+  ```
 
-    ```sh
-    git revert HEAD
-    ```
+  ```sh
+  git revert HEAD
+  ```
 
-    ```terminal
-    Removing yr_3
-    [timeline 450d385] Revert "Year 3"
-    1 file changed, 0 insertions(+), 0 deletions(-)
-    delete mode 100644 yr_3
-    ```
+  ```terminal
+  Removing yr_3
+  [timeline 450d385] Revert "Year 3"
+  1 file changed, 0 insertions(+), 0 deletions(-)
+  delete mode 100644 yr_3
+  ```
 
-    ```sh
-    ls
-    ```
+  ```sh
+  ls
+  ```
 
-    ```terminal
-    README.md  yr_1  yr_2
-    ```
+  ```terminal
+  README.md  yr_1  yr_2
+  ```
+
 
 ## コミットハッシュで過去に戻る
 
@@ -316,11 +335,11 @@ To https://github.com/ahandsel/learning_git_3.git
 
 `git log --oneline`
 
-<span style="color:#AAAB25"> __727642d \(__ </span>  <span style="color:#38B9C7"> __HEAD \->__ </span>  <span style="color:#39C026"> __timeline__ </span>  <span style="color:#AAAB25"> __\,__ </span>  <span style="color:#CA3323"> __origin/timeline__ </span>  <span style="color:#AAAB25"> __\)__ </span>  __Revert "Year 3"__  
-<span style="color:#AAAB25"> __f7cf1cb__ </span>  __Year 3__  
-<span style="color:#AAAB25"> __f7fb07c__ </span>  __Year 2__  
-<span style="color:#AAAB25"> __e4df7f2__ </span>  __Year 1__  
-<span style="color:#AAAB25"> __03098e7 \(__ </span>  <span style="color:#CA3323"> __origin/main__ </span>  <span style="color:#AAAB25"> __\,__ </span>  <span style="color:#39C026"> __main__ </span>  __\) README file created__  
+<span style="color:#AAAB25"> **727642d \(** </span> <span style="color:#38B9C7"> **HEAD \->** </span> <span style="color:#39C026"> **timeline** </span> <span style="color:#AAAB25"> **\,** </span> <span style="color:#CA3323"> **origin/timeline** </span> <span style="color:#AAAB25"> **\)** </span> **Revert "Year 3"**  
+<span style="color:#AAAB25"> **f7cf1cb** </span> **Year 3**  
+<span style="color:#AAAB25"> **f7fb07c** </span> **Year 2**  
+<span style="color:#AAAB25"> **e4df7f2** </span> **Year 1**  
+<span style="color:#AAAB25"> **03098e7 \(** </span> <span style="color:#CA3323"> **origin/main** </span> <span style="color:#AAAB25"> **\,** </span> <span style="color:#39C026"> **main** </span> **\) README file created**
 
 `git revert f7fb07` Year 2 commit's hash
 
@@ -335,17 +354,17 @@ Removing yr_2
 
 `git log --oneline`
 
-<span style="color:#AAAB25"> __f3fc335 \(__ </span>  <span style="color:#38B9C7"> __HEAD \->__ </span>  <span style="color:#39C026"> __timeline__ </span>  <span style="color:#AAAB25"> __\)__ </span>  __Revert "Year 2"__
+<span style="color:#AAAB25"> **f3fc335 \(** </span> <span style="color:#38B9C7"> **HEAD \->** </span> <span style="color:#39C026"> **timeline** </span> <span style="color:#AAAB25"> **\)** </span> **Revert "Year 2"**
 
-<span style="color:#AAAB25"> __727642d \(__ </span>  <span style="color:#CA3323"> __origin/timeline__ </span>  <span style="color:#AAAB25"> __\)__ </span>  __Revert "Year 3"__
+<span style="color:#AAAB25"> **727642d \(** </span> <span style="color:#CA3323"> **origin/timeline** </span> <span style="color:#AAAB25"> **\)** </span> **Revert "Year 3"**
 
-<span style="color:#AAAB25"> __f7cf1cb__ </span>  __Year 3__
+<span style="color:#AAAB25"> **f7cf1cb** </span> **Year 3**
 
-<span style="color:#AAAB25"> __f7fb07c__ </span>  __Year 2__
+<span style="color:#AAAB25"> **f7fb07c** </span> **Year 2**
 
-<span style="color:#AAAB25"> __e4df7f2__ </span>  __Year 1__
+<span style="color:#AAAB25"> **e4df7f2** </span> **Year 1**
 
-<span style="color:#AAAB25"> __03098e7 \(__ </span>  <span style="color:#CA3323"> __origin/main__ </span>  <span style="color:#AAAB25"> __\,__ </span>  <span style="color:#39C026"> __main__ </span>  <span style="color:#AAAB25"> __\)__ </span>  __README file created__
+<span style="color:#AAAB25"> **03098e7 \(** </span> <span style="color:#CA3323"> **origin/main** </span> <span style="color:#AAAB25"> **\,** </span> <span style="color:#39C026"> **main** </span> <span style="color:#AAAB25"> **\)** </span> **README file created**
 
 Revert
 
@@ -358,8 +377,10 @@ README.md yr_1
 git revert [commit hash]
 
 `git revert [commit hash]`
+
 * 前進する取り消しコマンド
 * 指定された[ `commit` ]によって加えられた変更を反転し, 新しいコミットとして結果を追加します.
+
 
 ## Reset vs Revert
 
@@ -372,8 +393,12 @@ git revert [commit hash]
 
 ![03_Revert_GitRevert.png](img/03_Revert_GitRevert.png)
 
+
 ## 次のセクション
+
 [Git CLI カンニングペーパー - 04_CheatSheet.md](04_CheatSheet.md)
 
+
 ## 講義ガイド一覧 <!-- omit in toc -->
+
 [README.md](README.md) ⚙️

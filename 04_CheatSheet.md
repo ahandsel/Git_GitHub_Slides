@@ -6,15 +6,17 @@ _🇺🇸 English version: [04_CheatSheet_EN.md](04_CheatSheet_EN.md)_
 
 詳しくはこちら: [Git チートシート - GitHub Cheatsheets](https://training.github.com/downloads/ja/github-git-cheat-sheet/)
 
+
 ## Create a Repository
 
-| コマンド                      | 説明                                                                   |
-| ----------------------------- | ---------------------------------------------------------------------- |
-| `git init`                    | ローカルリポジトリを作成します                                         |
+| コマンド                      | 説明                                                                    |
+| ----------------------------- | ----------------------------------------------------------------------- |
+| `git init`                    | ローカルリポジトリを作成します                                          |
 | `git clone [url]`             | GitHub (リモートリポジトリ)からリポジトリをクローン(ダウンロード)します |
 | `git remote add origin [url]` | ローカルリポジトリをGitHub (リモートリポジトリ)に接続します             |
 
 URL例= `https://github.com/`UserName`/`repo``
+
 
 ## Branches
 
@@ -26,13 +28,15 @@ URL例= `https://github.com/`UserName`/`repo``
 | `git checkout [branch]`    | 指定されたブランチに移動します                                       |
 | `git merge [branch]`       | 指定されたブランチを現在のブランチにマージします                     |
 
+
 ## Sync Changes Between Local & Remote
 
-| コマンド                      | 説明                                                                                   |
-| ----------------------------- | -------------------------------------------------------------------------------------- |
+| コマンド                      | 説明                                                                                    |
+| ----------------------------- | --------------------------------------------------------------------------------------- |
 | `git fetch [remote] [branch]` | GitHub (リモートリポジトリ)から最新情報をローカルリポジトリへダウンロードします         |
 | `git push [remote] [branch]`  | ローカルリポジトリのコミットをGitHub (リモートリポジトリ)にアップロード(プッシュ)します |
-| `git pull [remote]`           | GitHubの変更履歴をローカルにダウンロードします                                         |
+| `git pull [remote]`           | GitHubの変更履歴をローカルにダウンロードします                                          |
+
 
 ## Snapshot
 
@@ -43,6 +47,7 @@ URL例= `https://github.com/`UserName`/`repo``
 | `git add -A`                | 新規及び変更されたすべてのファイルをステージングエリアに追加します   |
 | `git commit -m "[message]"` | メッセージと共に, リポジトリへ変更を記録します                       |
 
+
 ## Make Changes
 
 | コマンド                         | 説明                                                               |
@@ -52,6 +57,7 @@ URL例= `https://github.com/`UserName`/`repo``
 | `git diff [branch A] [branch B]` | ２つのブランチ間の差分を表示します                                 |
 | `git show [commit]`              | 指定されたコミットのメタ情報と変更内容を表示します                 |
 
+
 ## Redo Commits
 
 | コマンド              | 説明                                                     |
@@ -60,5 +66,7 @@ URL例= `https://github.com/`UserName`/`repo``
 | `git revert [commit]` | 指定したcommitを取り消すためにコマンドです               |
 | `git revert HEAD`     | 直前のコミットを取り消すための新しいコミットを作成します |
 
+
 ## 終わり <!-- omit in toc -->
+
 [README.md](README.md) ⚙️
