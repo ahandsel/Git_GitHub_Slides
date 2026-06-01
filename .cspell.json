@@ -6,7 +6,23 @@
   // language - current active spelling language
   "language": "en",
   // words - list of words to be always considered correct
-  "words": [],
+  "words": [
+    "Authy",
+    "choco",
+    "drwx",
+    "drwxr",
+    "dthree",
+    "EDITMSG",
+    "Enpass",
+    "gitforwindows",
+    "githubcom",
+    "mkdir",
+    "oneline",
+    "Piyo",
+    "Qiita",
+    "unstage",
+    "wslgit"
+  ],
   // flagWords - list of words to be always considered incorrect
   // "flagWords": [""],
   // ignorePaths - list of glob patterns to ignore file paths

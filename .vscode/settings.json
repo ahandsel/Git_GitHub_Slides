@@ -1,19 +1,5 @@
 {
-  "cSpell.words": [
-    "Authy",
-    "choco",
-    "drwx",
-    "drwxr",
-    "dthree",
-    "EDITMSG",
-    "Enpass",
-    "gitforwindows",
-    "githubcom",
-    "mkdir",
-    "oneline",
-    "Piyo",
-    "Qiita",
-    "unstage",
-    "wslgit"
-  ]
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false
 }
