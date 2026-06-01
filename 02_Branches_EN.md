@@ -15,7 +15,7 @@ This section goes over Git branches and how to work with your first branch.
 * [Add a file to the develop branch](#add-a-file-to-the-develop-branch)
   * [Verify on GitHub Desktop App](#verify-on-github-desktop-app)
 * [See the changes on GitHub](#see-the-changes-on-github)
-* [Create & Merge a Pull Request](#create--merge-a-pull-request)
+* [Create \& Merge a Pull Request](#create--merge-a-pull-request)
 * [Update local repo from GitHub repo](#update-local-repo-from-github-repo)
 * [What is Git Branch?](#what-is-git-branch)
   * [What is a branch?](#what-is-a-branch)
@@ -321,15 +321,14 @@ When development is complete, merge the branches!
 
 ![02_Branches_GitHubWorkflow.png](./img/02_Branches_GitHubWorkflow.png)
 
-| #                                                                                        | Step                  | Notes                                                                                            |
-| ---------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
-| 1                                                                                        | Create a branch       | `main``feature`Create a branch from and start development                                        |
-| 2                                                                                        | Commit changes        | After the code implementation is complete, `commit`create. You\                                  |
-| `commit`can check the change history by creating, and you can roll back and refer to it. |
-| 3                                                                                        | Open a Pull Request   | When you're ready to share your implementation with others, create a Pull Request.               |
-| Four                                                                                     | Discuss & Review Code | Get code reviews from teen members and discuss them.                                             |
-| Five                                                                                     | Deploy & Test         | Deploy the code to your test environment to make sure it works.                                  |
-| 6                                                                                        | Merge to main         | The implementation is now in effect and the Pull Request keeps a record of changes to your code. |
+| #    | Step                  | Notes                                                                                                                                                      |
+| ---- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | Create a branch       | `main``feature`Create a branch from and start development                                                                                                  |
+| 2    | Commit changes        | After the code implementation is complete, `commit`create. You<br>`commit`can check the change history by creating, and you can roll back and refer to it. |
+| 3    | Open a Pull Request   | When you're ready to share your implementation with others, create a Pull Request.                                                                         |
+| Four | Discuss & Review Code | Get code reviews from teen members and discuss them.                                                                                                       |
+| Five | Deploy & Test         | Deploy the code to your test environment to make sure it works.                                                                                            |
+| 6    | Merge to main         | The implementation is now in effect and the Pull Request keeps a record of changes to your code.                                                           |
 
 
 ### Detailed Overview of the GitHub Workflow
@@ -386,13 +385,12 @@ Insight: Repository analysis tool
 
 ## GitHub parts
 
-|                                           |                                                   |
-| ----------------------------------------- | ------------------------------------------------- |
-| Branch                                    | Code alternative timeline\                        |
-| example: main, Development, Feature / xxx |
-| Commit                                    | Save file changes to repository                   |
-| Pull Request                              | Share your proposed changes with others           |
-| Merge Pull Request                        | Actually change the branch (main etc.) and update |
+|                    |                                                                        |
+| ------------------ | ---------------------------------------------------------------------- |
+| Branch             | Code alternative timeline<br>example: main, Development, Feature / xxx |
+| Commit             | Save file changes to repository                                        |
+| Pull Request       | Share your proposed changes with others                                |
+| Merge Pull Request | Actually change the branch (main etc.) and update                      |
 
 
 ## Quiz time

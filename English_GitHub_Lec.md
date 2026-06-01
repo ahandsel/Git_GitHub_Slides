@@ -10,43 +10,31 @@ Markdown/ Outline version of the content
 * [Hands-on A Overview](#hands-on-a-overview)
   * [Local Configuration](#local-configuration)
   * [GitHub Configuration](#github-configuration)
-  * [Linking Local & GitHub](#linking-local--github)
+  * [Linking Local \& GitHub](#linking-local--github)
   * [Create a Local Git Repository](#create-a-local-git-repository)
   * [Add a README.md file to the Local Repo](#add-a-readmemd-file-to-the-local-repo)
   * [Check Git's Status](#check-gits-status)
   * [Saving #1 \* Add a File to Git's Staging Area](#saving-1--add-a-file-to-gits-staging-area)
   * [Saving #2 \* Add a File to Git Repo](#saving-2--add-a-file-to-git-repo)
   * [Create a GitHub Repository](#create-a-github-repository)
-  * [Local Git :arrow_forward: GitHub](#local-git-arrow_forward-github)
+  * [Local Git :arrow\_forward: GitHub](#local-git-arrow_forward-github)
   * [Hands-On A is Completed](#hands-on-a-is-completed)
 * [Hands-On A's Concepts](#hands-on-as-concepts)
   * [Saving Changes with Git](#saving-changes-with-git)
-    * [working directory](#working-directory)
-    * [git add](#git-add)
-    * [staging area](#staging-area)
-    * [Why have Staging Area?](#why-have-staging-area)
-    * [git commit](#git-commit)
-    * [repository](#repository)
   * [Working with Remote Repos](#working-with-remote-repos)
-    * [git remote command](#git-remote-command)
-    * [git remote --verbose](#git-remote---verbose)
-  * [git push [remote] [branch]](#git-push-remote-branch)
+  * [git push \[remote\] \[branch\]](#git-push-remote-branch)
   * [Hands-on A Review](#hands-on-a-review)
   * [Hands-on A Quiz Time](#hands-on-a-quiz-time)
-* [Hands-on B - Make & Merge Branches](#hands-on-b---make--merge-branches)
+* [Hands-on B - Make \& Merge Branches](#hands-on-b---make--merge-branches)
   * [Create a New Branch](#create-a-new-branch)
   * [Changing develop Branch](#changing-develop-branch)
   * [Confirming the Change on GitHub](#confirming-the-change-on-github)
-  * [Create & Merge Pull Request](#create--merge-pull-request)
-  * [GitHub repo -> Update Local repo](#github-repo---update-local-repo)
-* [What are branches? | Overview of Hands-on B](#what-are-branches--overview-of-hands-on-b)
+  * [Create \& Merge Pull Request](#create--merge-pull-request)
+  * [GitHub repo -\> Update Local repo](#github-repo---update-local-repo)
+* [What are branches? - Overview of Hands-on B](#what-are-branches---overview-of-hands-on-b)
   * [Git Branches](#git-branches)
-    * [What are branches?](#what-are-branches)
-    * [Why use branches?](#why-use-branches)
   * [Branches - Website](#branches---website)
   * [Git Push vs Pull - Teamwork](#git-push-vs-pull---teamwork)
-    * [`git push`](#git-push)
-    * [`git pull`](#git-pull)
 * [GitHub Workflow](#github-workflow)
   * [#1 - Create a Branch](#1---create-a-branch)
   * [#2 - Making a Commit](#2---making-a-commit)
@@ -54,7 +42,6 @@ Markdown/ Outline version of the content
   * [#4 - Test](#4---test)
   * [#5 - Merge to main](#5---merge-to-main)
   * [Overview of GitHub Workflow](#overview-of-github-workflow)
-  <!-- markdownlint-enable MD007 -->
 
 ---
 
@@ -389,7 +376,7 @@ $ git push -u origin develop
 ---
 
 
-## What are branches? | Overview of Hands-on B
+## What are branches? - Overview of Hands-on B
 
 
 ### Git Branches
@@ -432,7 +419,7 @@ $ git push -u origin develop
 
 * the 'upload' command
 * "Push" is forcing the changes to the target repo.
-  * `[ your code ] -- pushing --> [target]`
+  * `[ your code ] -- pushing → [target]`
 * A "push request" would be the target repo requesting you to push your changes.
 
 

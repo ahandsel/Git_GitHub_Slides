@@ -85,7 +85,7 @@ Apple has released a set of tools and resources for app developers such as passw
 
 [github.com/apple/password-manager-resources](https://github.com/apple/password-manager-resources)
 
-[Apple publishes free resources to improve password security | ZDNet](https://www.zdnet.com/article/apple-publishes-free-resources-to-improve-password-security/)
+[Apple publishes free resources to improve password security - ZDNet](https://www.zdnet.com/article/apple-publishes-free-resources-to-improve-password-security/)
 
 ---
 

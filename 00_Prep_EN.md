@@ -328,7 +328,7 @@ git config --global init.defaultBranch main
 ### Windows - Install cash
 
 1. Install [Node.js](https://nodejs.org/en/about/) on Windows
-   * [Download | Node.js](https://nodejs.org/en/download/)
+   * [Download - Node.js](https://nodejs.org/en/download/)
 2. Verify Node.js installation by running the following command on Command Prompt
    * `node --version`
 3. Install [dthree/cash](https://github.com/dthree/cash) so you can run Linux commands on Windows Command Prompt
