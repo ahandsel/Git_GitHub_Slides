@@ -29,19 +29,16 @@ Readers walk away with
 * GitHub basics and settings
 * Local settings; Connect local to GitHub
 * Save with Git; `git remote`, `git push`
-* ⚠️ Pending Translation
 
 [Create & Merge Branches - 02_Branches_EN.md](02_Branches_EN.md)
 
 * Create and merge branches!
 * GitHub Workflow
 * Overview of the GitHub site
-* ⚠️ Pending Translation
 
 [Revert - 03_Revert_EN.md](03_Revert_EN.md)
 
 * Undo files with Git
-* ⚠️ Pending Translation
 
 [Git Cheat Sheet - 04_CheatSheet_EN.md](04_CheatSheet_EN.md)
 
