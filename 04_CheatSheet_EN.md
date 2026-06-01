@@ -1,10 +1,11 @@
 # Git Cheat Sheet
 
-_🇯🇵 日本語版: [04_CheatSheet.md](04_CheatSheet.md)_
+_🇯🇵 日本語版：[04_CheatSheet.md](04_CheatSheet.md)_
 
 The following is an overview of useful Git command line (CLI) commands.
 
 [GitHub Git Cheat Sheet - GitHub CheatSheet](https://training.github.com/downloads/github-git-cheat-sheet/)
+
 
 ## Create a repo
 
@@ -15,8 +16,10 @@ The following is an overview of useful Git command line (CLI) commands.
 | `git remote add origin` | Link the local repo to an empty GitHub repo           |
 
 URL
+
 * Template = `https://github.com/{UserName}/{repo}.git`
 * Example = `https://github.com/ahandsel/Git_GitHub_Slides.git`
+
 
 ## Branches
 
@@ -28,6 +31,7 @@ URL
 | `git checkout [branch]`    | Move to the specified branch                         |
 | `git merge [branch]`       | Merges the specified branch into the current branch  |
 
+
 ## Sync Changes Between Local & Remote
 
 | Command                       | Explanation                                                                  |
@@ -38,14 +42,16 @@ URL
 
 ⚡ `git pull` is a combination of `git fetch` and `git merge` commands
 
+
 ## Snapshot
 
 | Command                     | Explanation                                                          |
 | --------------------------- | -------------------------------------------------------------------- |
-| `git add [file]`            | Add a file from the working directory to the staging area                    |
+| `git add [file]`            | Add a file from the working directory to the staging area            |
 | `git status`                | Lists all new or changed files that can be committed                 |
 | `git add -A`                | Add all new and modified files to the staging area                   |
 | `git commit -m "[message]"` | Records file snapshots permanently in version history with a message |
+
 
 ## Make Changes
 
@@ -56,6 +62,7 @@ URL
 | `git diff [branch A] [branch B]` | Shows the difference between the two branches                              |
 | `git show [commit]`              | Shows meta info and changes of the specified commit                        |
 
+
 ## Redo Commits
 
 | Command               | Explanation                                     |
@@ -64,5 +71,7 @@ URL
 | `git revert [commit]` | Command to cancel the specified commit          |
 | `git revert HEAD`     | Create a new commit to undo the previous commit |
 
+
 ## Done <!-- omit in toc -->
+
 [README_EN.md](README_EN.md) ⚙️
