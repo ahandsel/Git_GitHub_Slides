@@ -1,0 +1,8 @@
+# Word list to trigger cspell flags
+
+# Pronouns
+!we
+!We
+
+# Notion
+!notion
