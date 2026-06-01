@@ -17,7 +17,7 @@ Markdown/ Outline version of the content
   * [Saving #1 \* Add a File to Git's Staging Area](#saving-1--add-a-file-to-gits-staging-area)
   * [Saving #2 \* Add a File to Git Repo](#saving-2--add-a-file-to-git-repo)
   * [Create a GitHub Repository](#create-a-github-repository)
-  * [Local Git :arrow\_forward: GitHub](#local-git-arrow_forward-github)
+  * [Local Git :arrow_forward: GitHub](#local-git-arrow_forward-github)
   * [Hands-On A is Completed](#hands-on-a-is-completed)
 * [Hands-On A's Concepts](#hands-on-as-concepts)
   * [Saving Changes with Git](#saving-changes-with-git)

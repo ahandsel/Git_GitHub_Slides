@@ -34,7 +34,7 @@ Some English files are still marked "⚠️ Pending Translation".
 
 The site is built by GitHub Pages' built-in Jekyll (deploy-from-branch); there is no `Gemfile` and no GitHub Actions workflow.
 The Markdown processor is therefore **Kramdown with GFM input**, NOT GitHub.com's renderer, so content can render differently on the published site than in the repo preview.
-See [_config.yml](_config.yml): theme `jekyll-theme-cayman`, plugin `jekyll-relative-links` (rewrites `*.md` links to relative HTML links), and `README.md` is force-included.
+See [\_config.yml](_config.yml): theme `jekyll-theme-cayman`, plugin `jekyll-relative-links` (rewrites `*.md` links to relative HTML links), and `README.md` is force-included.
 
 Because of `jekyll-relative-links`, cross-references between docs must use relative `*.md` paths (e.g. `[Prep - 00_Prep.md](00_Prep.md)`), not absolute or `.html` URLs.
 A prompt for finding and fixing Kramdown render-breakers lives in [prompts/fix-breaking-markdown.md](prompts/fix-breaking-markdown.md).

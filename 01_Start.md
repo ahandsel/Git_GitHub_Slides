@@ -278,7 +278,6 @@ nothing to commit, working tree clean
 ![Gif_GitHub_Repo_Demo](img/Gif_GitHub_Repo_Demo.gif)
 
 
-
 ### Local Git → GitHub
 
 repository を `push` しましょう！
@@ -503,6 +502,7 @@ drwxr-xr-x 5 UserName staff 160 Jun 9 14:56 refs
 | ➡️  | [ remote repository (GitHub) 🌐 ] |
 
 `git push <remote> <branch>` 🔄
+
 * Local Repo → Remote Repo
 * ローカルリポジトリをリモートリポジトリにアップロードするコマンドです
 * コミットをエクスポートします
@@ -558,6 +558,7 @@ drwxr-xr-x 5 UserName staff 160 Jun 9 14:56 refs
 ### git push?
 
 `git push <remote> <branch>` 🔄
+
 * Local Repo → Remote Repo | コミットをエクスポートします
 * `git fetch` の対応
   * ローカルリポジトリへのインポートコミット

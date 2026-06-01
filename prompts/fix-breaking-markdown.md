@@ -46,7 +46,7 @@ Print a table: `# | file:line | class | snippet | severity | auto-fixable?`
 Safe to auto-fix:
 
 * **Class A in link text**: replace the separating `|` / `|` with `-`, preserving spacing.
-  Example: `[Download | Node.js](url)` →  `[Download - Node.js](url)`
+  Example: `[Download | Node.js](url)` → `[Download - Node.js](url)`
   If the `|` is in a heading, also update every TOC/in-page link that targets the old anchor.
 
 NOT safe - flag for human review instead of editing:
