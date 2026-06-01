@@ -33,7 +33,7 @@ Categorize:
 
 **D. Anchor/TOC mismatches** (MEDIUM) - in-page links `[..](#anchor)` whose target heading doesn't produce that exact Kramdown slug (punctuation like `?`/`|` dropped, spaces→ `-`, lowercased, `--` from removed chars).
 
-**E. Raw `<` `>` `&` and bare `{{ }}`/`{% %}`** that Kramdown or Liquid would misinterpret (LOW unless inside front-matter-adjacent content).
+**E. Raw `<` `>` `&` and bare Liquid delimiters - the double-curly-brace output form and the curly-brace-percent statement form** that Kramdown or Liquid would misinterpret (LOW unless inside front-matter-adjacent content).
 
 
 ## Step 2 - Flag everything
