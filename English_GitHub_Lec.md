@@ -5,8 +5,6 @@ Markdown/ Outline version of the content
 
 ## Outline <!-- omit in toc -->
 
-<!-- markdownlint-disable MD007 -->
-
 * [Hands-on A Overview](#hands-on-a-overview)
   * [Local Configuration](#local-configuration)
   * [GitHub Configuration](#github-configuration)
@@ -14,10 +12,10 @@ Markdown/ Outline version of the content
   * [Create a Local Git Repository](#create-a-local-git-repository)
   * [Add a README.md file to the Local Repo](#add-a-readmemd-file-to-the-local-repo)
   * [Check Git's Status](#check-gits-status)
-  * [Saving #1 \* Add a File to Git's Staging Area](#saving-1--add-a-file-to-gits-staging-area)
-  * [Saving #2 \* Add a File to Git Repo](#saving-2--add-a-file-to-git-repo)
+  * [Saving #1 - Add a File to Git's Staging Area](#saving-1---add-a-file-to-gits-staging-area)
+  * [Saving #2 - Add a File to Git Repo](#saving-2---add-a-file-to-git-repo)
   * [Create a GitHub Repository](#create-a-github-repository)
-  * [Local Git :arrow_forward: GitHub](#local-git-arrow_forward-github)
+  * [Local Git → GitHub](#local-git--github)
   * [Hands-On A is Completed](#hands-on-a-is-completed)
 * [Hands-On A's Concepts](#hands-on-as-concepts)
   * [Saving Changes with Git](#saving-changes-with-git)
@@ -29,18 +27,18 @@ Markdown/ Outline version of the content
   * [Create a New Branch](#create-a-new-branch)
   * [Changing develop Branch](#changing-develop-branch)
   * [Confirming the Change on GitHub](#confirming-the-change-on-github)
-  * [Create \& Merge Pull Request](#create--merge-pull-request)
-  * [GitHub repo -\> Update Local repo](#github-repo---update-local-repo)
+  * [Create and Merge Pull Request](#create-and-merge-pull-request)
+  * [GitHub repo → Update Local repo](#github-repo--update-local-repo)
 * [What are branches? - Overview of Hands-on B](#what-are-branches---overview-of-hands-on-b)
   * [Git Branches](#git-branches)
   * [Branches - Website](#branches---website)
   * [Git Push vs Pull - Teamwork](#git-push-vs-pull---teamwork)
 * [GitHub Workflow](#github-workflow)
-  * [#1 - Create a Branch](#1---create-a-branch)
-  * [#2 - Making a Commit](#2---making-a-commit)
-  * [#3 - Open a Pull Request](#3---open-a-pull-request)
-  * [#4 - Test](#4---test)
-  * [#5 - Merge to main](#5---merge-to-main)
+  * [Step 1 - Create a Branch](#step-1---create-a-branch)
+  * [Step 2 - Making a Commit](#step-2---making-a-commit)
+  * [Step 3 - Open a Pull Request](#step-3---open-a-pull-request)
+  * [Step 4 - Test](#step-4---test)
+  * [Step 5 - Merge to main](#step-5---merge-to-main)
   * [Overview of GitHub Workflow](#overview-of-github-workflow)
 
 ---
@@ -96,7 +94,7 @@ Configure it to be managed by git
 * See that the README.md needs to be tracked by git
 
 
-### Saving #1 \* Add a File to Git's Staging Area
+### Saving #1 - Add a File to Git's Staging Area
 
 * git add [file/folder]
 * command to add the [file/folder] to the staging area
@@ -105,7 +103,7 @@ Configure it to be managed by git
 * Next, we need to commit the file to have git track the changes
 
 
-### Saving #2 \* Add a File to Git Repo
+### Saving #2 - Add a File to Git Repo
 
 * git commit -m "message"
 * command to add the file/folder to the repository
@@ -125,7 +123,7 @@ Configure it to be managed by git
 * Do not initialize repository with README!
 
 
-### Local Git :arrow_forward: GitHub
+### Local Git → GitHub
 
 * Push the existing repository!
   * Get the URL by clicking on `Clone or download` button & copying the HTTPS link
@@ -234,7 +232,7 @@ Configure it to be managed by git
 ### git push [remote] [branch]
 
 * command to upload local repo content to a remote repo
-* i.e. export the commits from your local -> remote repo
+* i.e. export the commits from your local → remote repo
 * counterpart to git fetch (import commits to local repo)
 
 Note: Pushing can potentially overwrite changes!
@@ -322,16 +320,16 @@ $ git push -u origin develop
   * `https://github.com/USER/REPO/network`
 
 
-### Create & Merge Pull Request
+### Create and Merge Pull Request
 
 * **Pull Requests** shows others your changes without actual modifying
   * useful for code review
-* On GitHub, create the **pull request** to merge **develop** -> **main** branch
+* On GitHub, create the **pull request** to merge **develop** → **main** branch
 * Confirm the changes and **Merge** Pull request
 * This results in **main** branch having the two new files!
 
 
-### GitHub repo -> Update Local repo
+### GitHub repo → Update Local repo
 
 * Currently, your GitHub repo is ahead of the local copy
   * Use `git pull` command to address this
@@ -356,8 +354,8 @@ $ git push -u origin develop
   remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
   Unpacking objects: 100% (1/1), 631 bytes | 210.00 KiB/s, done.
   From https://github.com/ahandsel/learning_git
-  * branch            main     -> FETCH_HEAD
-    5f9f89b..1438ca5  main     -> origin/main
+  * branch            main     → FETCH_HEAD
+    5f9f89b..1438ca5  main     → origin/main
   Updating d775d42..1438ca5
   Fast-forward
   2nd_file.md     | 0
@@ -406,9 +404,9 @@ $ git push -u origin develop
 * changes in main impacts users
 * Two coders want to modify the website at the same time.
   * Make 3x branches:
-  * main -> live code
-  * feature_A -> for coder A to modify
-  * feature_B -> for coder B to modify
+  * main → live code
+  * feature_A → for coder A to modify
+  * feature_B → for coder B to modify
 * Once the code developments are done, merge the branches.
 
 
@@ -434,7 +432,7 @@ $ git push -u origin develop
 ## GitHub Workflow
 
 
-### #1 - Create a Branch
+### Step 1 - Create a Branch
 
 * The code for the **live** website is in the **main** branch
 * Any changes to here will effect the users!
@@ -443,7 +441,7 @@ $ git push -u origin develop
 * `git checkout -b develop`, `git branch`
 
 
-### #2 - Making a Commit
+### Step 2 - Making a Commit
 
 * In your **feature** branch, you are modifying code.
 * Each time you want to save a change, make a `commit`.
@@ -451,20 +449,20 @@ $ git push -u origin develop
 * Commits allow for roll backs and references.
 
 
-### #3 - Open a Pull Request
+### Step 3 - Open a Pull Request
 
 * When you are ready to share your changes to others, open a **Pull Request**.
 * Pull Requests are the start of code review.
 * Make & review comments at the Pull Request tab on GitHub.
 
 
-### #4 - Test
+### Step 4 - Test
 
 * After code review, deploy your code in a testing environment to make sure everything works.
 * Example: Test if the website looks and acts as expected on _Zendesk Preview_ mode.
 
 
-### #5 - Merge to main
+### Step 5 - Merge to main
 
 * Merge your code into the **main** branch.
 * Now your changes are live & visible to the users.
